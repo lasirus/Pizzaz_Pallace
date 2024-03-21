@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzazz Palace</title>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/128/6936/6936754.png" type="image/ico" />
+	<style>
+       html {
+scroll-behavior: smooth;
+}
+	body {
+    font-family: 'Arial', sans-serif;
+    font-family: 'Palatino Linotype', serif;
+    margin: 0;
+    padding: 0;
+background: -webkit-linear-gradient(45deg, rgb(156, 167, 164) 30%, rgb(106, 120, 120) 61%);
+background: -moz-linear-gradient(45deg, rgb(156, 167, 164) 30%, rgb(106, 120, 120) 61%);
+background: linear-gradient(45deg, rgb(156, 167, 164) 30%, rgb(106, 120, 120) 61%);
+}
+
+h1, p {color:#ddd;
+    text-align: center;
+    
+}
+.logo_pizza{
+position: relative;
+top: 76px;
+right: 20px;
+}
+
+h1{
+    text-align: left;
+    position: relative;
+left: 35px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header, nav, section, footer {
+    padding: 1em 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+background: -webkit-linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+background: -moz-linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+background: linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    font-weight: bold;
+    color: #ff8800;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.pizza_name {
+color: #ffd700;
+
+}
+
+.pizza_text{
+color: #ffffff;
+
+
+}
+label {
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+}
+.without_0{
+    padding: 0;
+    margin: 0;
+}
+
+.zelda{
+    color: white;
+    text-decoration: none;
+}
+.bord{
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 15px;
+
+}
+.bord1 {
+    color:#ddd;
+    padding: 0;
+    margin: 0;
+}
+.central{
+    vertical-align: middle;
+}
+.name {
+    color: white;
+}
+.container1 {
+    width: 48%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 150px;
+
+}
+
+.top_navigation{
+    position: fixed; /* Фиксированная позиция */
+            width: 100%;
+            top: 100;
+            z-index: 1000; /* Устанавливаем z-index, чтобы навигация оставалась выше остального контента */
+}
+.menu-item1 {
+    margin-bottom: 20px;
+    text-align: center;
+    flex-basis: calc(43%); 
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: 5%;
+}
+.padmar0{
+    margin-top: 0;
+    text-align: left;
+    padding-left: 7px;
+    
+    
+}
+.menu-item2{
+    margin-right: 20px;
+    border-right: 1px solid #e6c619;
+    
+}
+.menu-item3{
+    border-left: 1px solid #e6c619;
+}
+.menu-itemTop{
+    border-bottom: 1px solid #e6c619;
+}
+.menu-itemBott{
+    border-top: 1px solid #e6c619;
+}
+h4{
+    font-size: 120%;
+    padding: 0;
+    padding-top: 20px;
+    padding-left: 7px;
+    margin: 0;
+    text-align: left;
+}
+.water{
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+
+.sidebar { 
+
+            color: #fff;
+            width: 70px;
+            padding: 20px;
+            padding-top: 60px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            height: 100%;
+            position: fixed; /* Фиксированная позиция */
+            z-index: 1000;
+            margin-top: -70.5px;
+            background-color: rgba(205, 214, 219, 0.01);
+        
+            
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            transition: background-color 0.3s;
+            padding-bottom: 10px;
+            text-align: center;
+
+        }
+
+            /* Стили для основного контента */
+        .content {
+            flex: 1;
+            padding: 0px;
+            margin: 0;
+        }
+        .change-text{  /*меняет цвет при наведении */
+  padding: 20px 0px;
+  line-height: 1;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; 
+}
+.change-text:hover{
+  color: #c3dfdb;  /* Конец */
+}
+.item {    /*анимация на картинке */
+  color: white;
+  transition: transform ease 300ms;
+}
+
+.item:hover {
+  transform: translate(0, -10px);
+}       
+
+
+.leftH{
+    text-align: left;
+}
+.containerDen{
+    width: 60%;
+    margin-left: 200px;
+    font-size: 120%
+
+}
+
+.ingred_main{
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.ingred_item{
+    width: 40%;
+}
+
+.pizza_0ld{
+    border: 2px black solid;
+    width: 500px;
+    height: 400px;
+    align-items: left;
+    margin-left: 10%;
+}
+
+h3, h4{
+    color: #fff;
+}
+
+.pizzaback{
+    z-index: -1;
+    position: absolute;
+    top: 1430px; left: 70px; bottom: 0; right: 0;
+   width: 900px;
+
+}
+.gold{
+    color: #e6c619;
+}
+.margbig{
+    margin-top: 125px;
+}
+.marg2{
+    margin-top: 200px;
+    margin-right: 200px;
+}
+
+.zeroall{
+    margin: 0px;
+    margin-top: 90px;
+    padding: 0px;
+    text-align: left;
+}
+.krug{
+    border-radius: 5%;
+    border: 3px black solid;
+}
+/*  Конец  */
+  </style>
+</head>
+<body>
+	</style>
+</head>
+
+<body>
+    <header>
+        <nav class="bord">
+            <div class=" container central ">
+                <a class="change-text" href="Among_us.html">О нас</a> 
+                <a class="change-text" href="Other.html">Прочее</a> 
+                <a class="change-text" href="Contacts.html">Контакты</a> 
+            </div>
+        </nav>
+        <nav>
+            <div class="sidebar">
+                <a class="change-text" href="Pizzazz_Palace.html#menu">Пиццы</a> 
+                <a class="change-text" href="Pizzazz_Palace.html#beverages">Напитки</a> 
+                <a class="change-text" href="Pizzazz_Palace.html#sauces">Соусы</a> 
+                <a class="change-text" href="Pizzazz_Palace.html#Dessert">Десерты</a>
+              
+            </div>
+        </nav>
+        <div class="container">
+            <a href="Pizzazz_Palace.html">
+		<img class = "logo_pizza awithout_0" height="55" width="55" src="https://cdn-icons-png.flaticon.com/128/6936/6936754.png" alt="logo_pizza">
+        <nav class="bord1">
+        <h1>Pizzazz Palace</h1>
+        </a>
+        </div>
+    </nav>
+    </header>
+    <div class="containerDen container1">
+        <div class="menu-item1">
+            <iframe class="krug" width="315" height="560" src="https://www.youtube.com/embed/CdKEOwzlZOw" title="Помните ролик с чего все началось? 🔥" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+        </div>
+        <div class="menu-item1">
+            <p class="zeroall">
+                Приготовление пиццы - настоящее искусство!
+                <br>✔ 🍕 Тесто мягкое, как облачко, ингредиенты свежие и красочные: помидоры, оливки, перчики, мясо - все тонкими ломтиками.
+                <br>✔ 🥩 А теперь, соус! Это как сюрприз в подарке - без него не то! Выливай его равномерно по тесту, словно профессиональный художник на своем полотне.
+                <br>✔ 🧀 А потом? Да, правильно, посыпь все это каскадом сыра! 
+                <br>✔ 😋 Подожди, пока остынет, а потом... нарежь и наслаждайся! 
+            </p>        
+        </div>
+    </div>
+    
+    <div class="containerDen">
+        <h3>Пока ждёте доставку...</h3>
+        <audio controls>
+            <source src="muzica.mp3">
+            Тег audio не поддерживается вашим браузером. <a href="https://drivemusic.club/klassicheskaya_muzyka/64845-betkhoven-lunnaja-sonata.html">Скачайте музыку</a>
+          </audio>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Доставка пиццы "Pizzazz_Palace"</p>
+        </div>
+    </footer>
+</body>
+
+</html>

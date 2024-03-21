@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzazz Palace</title>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/128/6936/6936754.png" type="image/ico" />
+	<style>
+       html {
+scroll-behavior: smooth;
+}
+	body {
+    font-family: 'Arial', sans-serif;
+    font-family: 'Palatino Linotype', serif;
+    margin: 0;
+    padding: 0;
+background: -webkit-linear-gradient(45deg, rgb(156, 167, 164) 30%, rgb(106, 120, 120) 61%);
+background: -moz-linear-gradient(45deg, rgb(156, 167, 164) 30%, rgb(106, 120, 120) 61%);
+background: linear-gradient(45deg, rgb(156, 167, 164) 30%, rgb(106, 120, 120) 61%);
+}
+
+h1, p {color:#ddd;
+    text-align: center;
+    
+}
+.logo_pizza{
+position: relative;
+top: 76px;
+right: 20px;
+}
+
+h1{
+    text-align: left;
+    position: relative;
+left: 35px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header, nav, section, footer {
+    padding: 1em 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+background: -webkit-linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+background: -moz-linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+background: linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    font-weight: bold;
+    color: #ff8800;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.pizza_name {
+color: #ffd700;
+
+}
+
+.pizza_text{
+color: #ffffff;
+
+
+}
+label {
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+}
+.without_0{
+    padding: 0;
+    margin: 0;
+}
+
+.zelda{
+    color: white;
+    text-decoration: none;
+}
+.bord{
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 15px;
+
+}
+.bord1 {
+    color:#ddd;
+    padding: 0;
+    margin: 0;
+}
+.central{
+    vertical-align: middle;
+}
+.name {
+    color: white;
+}
+.container1 {
+    width: 48%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 150px;
+
+}
+
+.top_navigation{
+    position: fixed; /* Фиксированная позиция */
+            width: 100%;
+            top: 100;
+            z-index: 1000; /* Устанавливаем z-index, чтобы навигация оставалась выше остального контента */
+}
+.menu-item1 {
+    margin-bottom: 20px;
+    text-align: center;
+    flex-basis: calc(43%); 
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: 5%;
+}
+.padmar0{
+    margin-top: 0;
+    text-align: left;
+    padding-left: 7px;
+    
+    
+}
+.menu-item2{
+    margin-right: 20px;
+    border-right: 1px solid #e6c619;
+    
+}
+.menu-item3{
+    border-left: 1px solid #e6c619;
+}
+.menu-itemTop{
+    border-bottom: 1px solid #e6c619;
+}
+.menu-itemBott{
+    border-top: 1px solid #e6c619;
+}
+h4{
+    font-size: 120%;
+    padding: 0;
+    padding-top: 20px;
+    padding-left: 7px;
+    margin: 0;
+    text-align: left;
+}
+.water{
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+
+.sidebar { 
+
+            color: #fff;
+            width: 70px;
+            padding: 20px;
+            padding-top: 60px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            height: 100%;
+            position: fixed; /* Фиксированная позиция */
+            z-index: 1000;
+            margin-top: -70.5px;
+            background-color: rgba(205, 214, 219, 0.01);
+        
+            
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            transition: background-color 0.3s;
+            padding-bottom: 10px;
+            text-align: center;
+
+        }
+
+            /* Стили для основного контента */
+        .content {
+            flex: 1;
+            padding: 0px;
+            margin: 0;
+        }
+        .change-text{  /*меняет цвет при наведении */
+  padding: 20px 0px;
+  line-height: 1;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; 
+}
+.change-text:hover{
+  color: #c3dfdb;  /* Конец */
+}
+.item {    /*анимация на картинке */
+  color: white;
+  transition: transform ease 300ms;
+}
+
+.item:hover {
+  transform: translate(0, -10px);
+}       
+
+
+.leftH{
+    text-align: left;
+}
+.containerDen{
+    width: 60%;
+    margin-left: 200px;
+    font-size: 120%
+
+}
+
+.ingred_main{
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.ingred_item{
+    width: 40%;
+}
+
+.pizza_0ld{
+    border: 2px black solid;
+    width: 500px;
+    height: 400px;
+    align-items: left;
+    margin-left: 10%;
+}
+
+h3, h4{
+    color: #fff;
+}
+
+.pizzaback{
+    z-index: -1;
+    position: absolute;
+    top: 1160px; left: 150px; bottom: 0; right: 0;
+   width: 900px;
+
+}
+.gold{
+    color: #e6c619;
+}
+.margbig{
+    margin-top: 125px;
+}
+.marg2{
+    margin-top: 200px;
+    margin-right: 200px;
+}
+/*  Конец  */
+  </style>
+</head>
+<body>
+	</style>
+</head>
+
+<body>
+    <header>
+        <nav class="bord">
+            <div class=" container central ">
+                <a class="change-text" href="Among_us.html">О нас</a> 
+                <a class="change-text" href="Other.html">Прочее</a> 
+                <a class="change-text" href="Contacts.html">Контакты</a> 
+            </div>
+        </nav>
+        <nav>
+            <div class="sidebar">
+                <a class="change-text" href="Pizzazz_Palace.html#menu">Пиццы</a> 
+                <a class="change-text" href="Pizzazz_Palace.html#beverages">Напитки</a> 
+                <a class="change-text" href="Pizzazz_Palace.html#sauces">Соусы</a> 
+                <a class="change-text" href="Pizzazz_Palace.html#Dessert">Десерты</a>
+              
+            </div>
+        </nav>
+        <div class="container">
+            <a href="Pizzazz_Palace.html">
+		<img class = "logo_pizza awithout_0" height="55" width="55" src="https://cdn-icons-png.flaticon.com/128/6936/6936754.png" alt="logo_pizza">
+        <nav class="bord1">
+        <h1>Pizzazz Palace</h1>
+        </a>
+        </div>
+    </nav>
+    </header>
+    <div class="containerDen">
+        <h3 class="leftH">Мы</h3>
+        <p class="leftH">
+            В 2024 году в живописном городе Бельцы открылась уютная пиццерия, олицетворяющая дух дружбы и страсти к гастрономическому искусству. Здесь тепло и радушно встречают каждого гостя, словно старого друга. Секрет успеха этой пиццерии — в том, что ее основатели, составляющие дружный коллектив, делят общую страсть к созданию идеальной пиццы.
+        </p>
+        <p class="leftH">
+            Каждый член команды пиццерии — настоящий эксперт в своем деле, но их настоящая сила заключается в сплоченности и взаимопонимании. Вместе они с удовольствием творят и воплощают самые смелые кулинарные идеи, угощая своих гостей не только вкуснейшими пиццами, но и неповторимой атмосферой тепла и уюта.
+        </p>
+
+    </div>
+    <div class="containerDen">
+        <h3 class="leftH">История</h3>
+        <p class="leftH">
+            История нашей команды началась много лет назад, когда мы впервые встретились в одном известном пиццерийном заведении в Бельцах. Общая страсть к искусству создания пиццы сблизила нас, и с тех пор мы стали настоящей дружной семьей. За годы мы учились, совершенствовали свои навыки и мечтали о собственной пиццерии, где смогли бы воплотить наши самые смелые кулинарные фантазии. 
+        </p>
+        <p class="leftH">
+            И вот, в 2024 году, наша мечта осуществилась. Мы объединились в одну команду, чтобы открыть свою собственную пиццерию и поделиться с миром нашей любовью к этому блюду. Наша история — это история дружбы, страсти и преданности искусству пиццы. Мы гордимся каждым кусочком пиццы, который мы создаем, и с удовольствием делимся этим вкусом с нашими гостями, продолжая писать свою удивительную историю в мире гастрономии.
+        </p>
+
+    </div>
+    <div class="containerDen">
+        <h3 class="leftH">Ингредиенты</h3>
+        <p class="leftH">
+            Наши пиццы неповторимы благодаря тщательно подобранным идеальным ингредиентам, которые мы используем в каждом блюде. Мы стремимся к высочайшему качеству, выбирая только самые свежие и натуральные продукты для наших рецептов. Наша команда с гордостью использует только лучшие сорта мяса, свежие овощи и сочные фрукты, чтобы каждый кусочек пиццы радовал вас неповторимым вкусом и ароматом.
+        </p>
+        <p class="leftH">
+            Мы уделяем особое внимание деталям и сезонности продуктов, чтобы обеспечить максимальный вкус и питательность каждой пиццы. Наш выбор ингредиентов включает местные и экологически чистые продукты, поддерживая таким образом местных производителей и природу. Мы уверены, что именно внимание к деталям и качеству ингредиентов делает наши пиццы неповторимыми и позволяет нам радовать наших гостей вкусом и удовольствием от каждого кусочка.
+        </p>
+
+    </div>
+    <div class="containerDen marg2">
+    <div class="container1">
+        <div class="menu-item1 menu-item2 menu-itemTop">
+            <h4 class="gold">Тесто</h4>
+            <p class="padmar0 gold">  
+            Тесто - ключевой компонент наших пицц.
+        </div>
+        <div class="menu-item1 menu-item3 menu-itemTop">
+            <h4 class="gold">Овощи и зелень</h4>
+            <p class="padmar0 gold">
+                Овощи и зелень - только свежие и качественные.
+            </div>
+        <div class="menu-item1 menu-item2 menu-itemBott">
+            <h4 class="gold">Сыры</h4>
+            <p class="padmar0 gold">
+                Сыры - подбираем с особой тщательностью.
+            </div>
+        <div class="menu-item1 menu-item3 menu-itemBott">
+            <h4 class="gold">Мясо</h4>
+            <p class="padmar0 gold">
+                Мясо - только самое свежее и вкусное.
+            </div>
+    </div>
+    </div>
+    <img class="pizzaback" src="fsd1.png" alt="">
+    <div class="containerDen">
+        <h3 class="leftH margbig">Почему Pizzazz_Palace?</h3>
+        <p class="leftH">
+            Название "Pizzazz_Palace" для нашей пиццерии возникло с целью подчеркнуть нечто уникальное и яркое в нашем заведении. Мы выбрали это название, стремясь передать идею оригинальности и энергии в подаче блюд. Слово "Pizzazz" может ассоциироваться с яркими вкусами, оригинальными рецептами и творческим подходом к готовке пиццы. Слово "Palace" добавляет элегантности и роскоши, подчеркивая важность каждого гостя и создавая впечатление, будто посетитель входит во дворец вкуса. Таким образом, "Pizzazz_Palace" символизирует нашу пиццерию, где каждый посетитель наслаждается не только вкусной пиццей, но и неповторимой атмосферой, наполненной яркостью и утонченностью. Мы надеемся, что это название будет отражать наше стремление создать уникальное и запоминающееся место для наших гостей.
+        </p>
+        
+        <img class ="pizza_0ld" src="https://s0.rbk.ru/v6_top_pics/media/img/8/06/346879472560068.webp" alt="древняя пицца">
+        <p class="leftH">
+            Наш коллектив старается создать место, где люди могут не только наслаждаться великолепной кухней, но и чувствовать себя как дорогие гости. "Pizzazz_Palace" – это не просто пиццерия, это место, где сливаются воедино вкус, стиль и гостеприимство. Мы гордимся тем, что можем предложить уникальное пространство для тех, кто ценит необычайный опыт и восхитительный вкус.
+        </p>
+
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Доставка пиццы "Pizzazz_Palace"</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzazz Palace</title>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/128/6936/6936754.png" type="image/ico" />
+	<style>
+       html {
+scroll-behavior: smooth;
+}
+	body {
+    font-family: 'Arial', sans-serif;
+    font-family: 'Palatino Linotype', serif;
+    margin: 0;
+    padding: 0;
+background: -webkit-linear-gradient(45deg, rgb(156, 167, 164) 30%, rgb(106, 120, 120) 61%);
+background: -moz-linear-gradient(45deg, rgb(156, 167, 164) 30%, rgb(106, 120, 120) 61%);
+background: linear-gradient(45deg, rgb(156, 167, 164) 30%, rgb(106, 120, 120) 61%);
+}
+
+h1, p {color:#ddd;
+    text-align: center;
+    
+}
+.logo_pizza{
+position: relative;
+top: 76px;
+right: 20px;
+}
+
+h1{
+    text-align: left;
+    position: relative;
+left: 35px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header, nav, section, footer {
+    padding: 1em 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+background: -webkit-linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+background: -moz-linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+background: linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    font-weight: bold;
+    color: #ff8800;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.pizza_name {
+color: #ffd700;
+
+}
+
+.pizza_text{
+color: #ffffff;
+
+
+}
+label {
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+}
+.without_0{
+    padding: 0;
+    margin: 0;
+}
+
+.zelda{
+    color: white;
+    text-decoration: none;
+}
+.bord{
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 15px;
+
+}
+.bord1 {
+    color:#ddd;
+    padding: 0;
+    margin: 0;
+}
+.central{
+    vertical-align: middle;
+}
+.name {
+    color: white;
+}
+.container1 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.top_navigation{
+    position: fixed; /* Фиксированная позиция */
+            width: 100%;
+            top: 100;
+            z-index: 1000; /* Устанавливаем z-index, чтобы навигация оставалась выше остального контента */
+}
+
+
+.menu-item1 {
+    border: 1px solid #ddd;
+    padding: 20px;
+    clear: both;
+    margin-bottom: 20px;
+    text-align: center;
+    flex-basis: calc(43% - 20px); 
+    box-sizing: border-box;
+background: -webkit-linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+background: -moz-linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+background: linear-gradient(45deg, rgb(156, 167, 164) 32%, rgb(106, 120, 120) 28%);
+}
+
+
+.water{
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+
+.sidebar { 
+
+            color: #fff;
+            width: 70px;
+            padding: 20px;
+            padding-top: 60px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            height: 100%;
+            position: fixed; /* Фиксированная позиция */
+            z-index: 1000;
+            margin-top: -70.5px;
+            background-color: rgba(205, 214, 219, 0.01);
+        
+            
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            transition: background-color 0.3s;
+            padding-bottom: 10px;
+            text-align: center;
+
+        }
+
+            /* Стили для основного контента */
+        .content {
+            flex: 1;
+            padding: 0px;
+            margin: 0;
+        }
+        .change-text{  /*меняет цвет при наведении */
+  padding: 20px 0px;
+  line-height: 1;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; 
+}
+.change-text:hover{
+  color: #c3dfdb;  /* Конец */
+}
+.item {    /*анимация на картинке */
+  color: white;
+  transition: transform ease 300ms;
+}
+
+.item:hover {
+  transform: translate(0, -10px);
+}      
+
+section{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  Конец  */
+  </style>
+</head>
+<body>
+	</style>
+</head>
+
+<body>
+    <header>
+        <nav class="bord">
+            <div class=" container central ">
+                <a  target="_blank" class="change-text" href="Among_us.html">О нас</a> 
+                <a class="change-text" href="Other.html">Прочее</a> 
+                <a class="change-text" href="Contacts.html">Контакты</a> 
+            </div>
+        </nav>
+        <nav>
+            <div class="sidebar">
+                <a class="change-text" href="#menu">Пиццы</a> 
+                <a class="change-text" href="#beverages">Напитки</a> 
+                <a class="change-text" href="#sauces">Соусы</a> 
+                <a class="change-text" href="#Dessert">Десерты</a>
+              
+            </div>
+        </nav>
+        <div class="container">
+            <a href="Pizzazz_Palace.html">
+		<img class = "logo_pizza awithout_0" height="55" width="55" src="https://cdn-icons-png.flaticon.com/128/6936/6936754.png" alt="logo_pizza">
+        <nav class="bord1">
+        <h1>Pizzazz Palace</h1>
+        </a>
+        </div>
+    </nav>
+    </header>
+
+    
+
+
+
+
+    <section id="menu"> <!--Пиццы-->
+        <div class="container">
+          <div class="name"><h2>Пицца</h2></div> 
+            <div class="menu-item">
+                <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/748949429e25404ea10aab002c910d84_292x292.webp" alt="Маргарита">
+                <h3 class="pizza_name" >Маргарита</h3>
+                <p class="price">300 MDL</p>
+                <p class="description pizza_text">Свежий томатный соус, моцарелла, базилик.</p>
+            </div>
+
+            <div class="menu-item">
+                <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/fb9cc5b8ff2e47bdbcbdcb5930cddf06_292x292.webp" alt="Пепперони">
+                <h3 class="pizza_name ">Пепперони</h3>
+                <p class="price">350 MDL</p>
+                <p class="description pizza_text">Пикантная колбаса пепперони, томатный соус, моцарелла.</p>
+            </div>
+
+            <div class="menu-item">
+                <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/03c840b1ab6f4ccb84f5dc167e146598_292x292.webp" alt="Диабло">
+                <h3 class="pizza_name">Диабло</h3>
+                <p class="price">400 MDL</p>
+                <p class="description pizza_text">Ветчина, ананасы, томатный соус, моцарелла.</p>
+            </div>
+			 <div class="menu-item">
+                <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/cea570842b754c52b786c231c65bd2e2_292x292.webp" alt="Ветчина и сыр">
+                <h3 class="pizza_name">Ветчина и сыр</h3>
+                <p class="price">200 MDL</p>
+                <p class="description pizza_text">Ветчина, моцарелла, фирменный соус альфредо.</p>
+            </div>
+			 <div class="menu-item">
+                <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/d9c609f1422247f2b87b6293eb461ff0_292x292.webp" alt="Сырная">
+                <h3 class="pizza_name">Сырная</h3>
+                <p class="price">370 MDL</p>
+                <p class="description pizza_text">Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо.</p>
+            </div>
+			 <div class="menu-item">
+                <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/3e5f5f0adf7f4cdfa342ffb9b7b19590_292x292.webp" alt="Цыпленок ранч">
+                <h3 class="pizza_name">Цыпленок ранч</h3>
+                <p class="price">450 MDL</p>
+                <p class="description pizza_text">Цыпленок, ветчина, соус ранч, моцарелла, томаты, чеснок.</p>
+            </div>
+            <!-- Конец -->
+        </div>
+        <h1 class="water" >Напитки</h1> <!--Напитки-->
+        <section id="beverages"> 
+            <div class="container1">
+                <div class="menu-item1">
+                    <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/11eec6de3ebea1ea89663e5e0feaf85d_292x292.webp" alt="Кока-Кола">
+                    <h3 class="pizza_name" >Кока-Кола</h3>
+                    <p class="price">15 MDL</p>
+                </div>
+    
+                <div class="menu-item1">
+                    <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/11eec6de74537ac0aa46372a25248429_292x292.webp" alt="Спрайт">
+                    <h3 class="pizza_name ">Спрайт</h3>
+                    <p class="price">14 MDL</p>
+                </div>
+    
+                <div class="menu-item1">
+                    <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/11eec6de90ce3a2c9764f59c1321788a_292x292.webp" alt="Фанта">
+                    <h3 class="pizza_name">Фанта</h3>
+                    <p class="price">15 MDL</p>
+                </div>
+                 <div class="menu-item1">
+                    <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/0aeb4d1aac0346bbb887c9cad86bd085_292x292.webp" alt="BonAqua">
+                    <h3 class="pizza_name">BonAqua</h3>
+                    <p class="price">10 MDL</p>
+                </div> 
+                <!--  Конец   -->
+            </div> 
+            
+                 <section id="sauces"> <!--Соусы-->
+            <div class="container">
+              <div class="name"><h2>Соусы</h2></div> 
+
+                <div class="menu-item">
+                    <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/d5e1787652a445b8ab4a57e912e79a3d_292x292.webp" alt="Соус Сырный">
+                    <h3 class="pizza_name" >Соус Сырный</h3>
+                    <p class="price">7 MDL</p>
+                    <p class="description pizza_text">Cоус со вкусом расплавленного сыра для бортиков пиццы, 25 г</p>
+                </div>
+    
+                <div class="menu-item">
+                    <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/160b35e871e54f7cbc340f62e5d1a7bc_292x292.webp" alt="Чесночный соус">
+                    <h3 class="pizza_name ">Чесночный соус</h3>
+                    <p class="price">7 MDL</p>
+                    <p class="description pizza_text">Фирменный соус с чесночным вкусом для бортиков пиццы, 25 г</p>
+                </div>
+    
+                <div class="menu-item">
+                    <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/12cbd86b8f3a4a6593602940d2e65bd9_292x292.webp" alt="Барбекю">
+                    <h3 class="pizza_name">Барбекю</h3>
+                    <p class="price">7 MDL</p>
+                    <p class="description pizza_text"> Cоус с дымным ароматом для бортиков пиццы, 25 г</p>
+                </div>
+                     <!--  Конец   -->
+            </div> 
+            
+            <section id="Dessert"> <!--Десерты-->
+       <div class="container">
+         <div class="name"><h2>Десерты</h2></div> 
+
+           <div class="menu-item">
+               <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/a5e06cd91aed464e9c2048d5f91e4d26_292x292.webp" alt="Чизкейк">
+               <h3 class="pizza_name" >Чизкейк</h3>
+               <p class="price">35 MDL</p>
+               <p class="description pizza_text">Нежнейший творожный чизкейк</p>
+           </div>
+
+           <div class="menu-item">
+               <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/2556eeed7a3b4822ba62a6f30e111465_292x292.webp" alt="Чизкейк Банановый с шоколадным печеньем">
+               <h3 class="pizza_name ">Чизкейк Банановый с шоколадным печеньем</h3>
+               <p class="price">30 MDL</p>
+               <p class="description pizza_text">Нежный чизкейк с бананом и шоколадным печеньем</p>
+           </div>
+
+           <div class="menu-item">
+               <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/aaaf00a849a14804ba9264dc7838021e_292x292.webp" alt="Сырники с малиновым вареньем">
+               <h3 class="pizza_name">Сырники с малиновым вареньем</h3>
+               <p class="price">20 MDL</p>
+               <p class="description pizza_text">Такие нежные, в меру сладкие и напоминающие детство</p>
+           </div>
+
+           <div class="menu-item">
+            <img class="item" src="https://dodopizza-a.akamaihd.net/static/Img/Products/4922d35d13ef4acba55944a5d5cdae70_292x292.webp" alt="Маффин Три шоколада">
+            <h3 class="pizza_name">Маффин Три шоколада</h3>
+            <p class="price">17 MDL</p>
+            <p class="description pizza_text">Из натурального какао, а внутри — нежная начинка из кубиков белого и молочного шоколада</p>
+        </div>
+               <!--  Конец   -->   
+                
+    </section>
+
+    <section id="order">
+        <div class="container">
+            <h2>Оформить заказ</h2>
+            <form action="обработчик-заказа.php" method="post">
+                <label for="pizza-type">Выберите вид пиццы:</label>
+                <select name="pizza-type" id="pizza-type">
+                    <option value="margarita">Маргарита</option>
+                    <option value="pepperoni">Пепперони</option>
+                    <option value="hawaiian">Диабло</option>
+                    <!-- Добавьте другие виды пиццы -->
+                </select>
+
+                <label for="quantity">Количество:</label>
+                <input type="number" name="quantity" id="quantity" min="1" value="1">
+
+                <input type="submit" value="Заказать">
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p><a class = "zelda change-text" href="callto:+78142332211">Телефон: +373 68102998</p></a>
+            <p><a class = "zelda change-text" href="mailto:java.gimme@gmail.com">Email: Pizzazz_Palace@gmail.com</a></p>
+            <a href="https://www.facebook.com/top100pizza/"><img width="40"height="40" src="https://cdn-icons-png.flaticon.com/128/145/145802.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/watch?v=QeZcNxC6r2U"><img width="40"height="40" src="https://cdn-icons-png.flaticon.com/128/174/174883.png" alt="Youtube"></a>
+            <a href="https://vk.com/pizzahutrussia"><img width="40"height="40" src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="VK"></a>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Доставка пиццы "Pizzazz_Palace"</p>
+        </div>
+    </footer>
+</body>
+
+</html>

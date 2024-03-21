@@ -1,0 +1,118 @@
+Delivered-To: laslasirys@gmail.com
+Received: by 2002:a17:906:7d90:b0:a43:4f4:e53d with SMTP id v16csp402099ejo;
+        Thu, 29 Feb 2024 04:23:26 -0800 (PST)
+X-Received: by 2002:a2e:6e10:0:b0:2d2:bf96:ece3 with SMTP id j16-20020a2e6e10000000b002d2bf96ece3mr1202493ljc.42.1709209406536;
+        Thu, 29 Feb 2024 04:23:26 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1709209406; cv=none;
+        d=google.com; s=arc-20160816;
+        b=eDBw43XrfOEXru9PPlHrjjZCe6hN15Oo+RRc0rZL7drfoOYYgm1jMUl/xSApiu4g3W
+         p5DnY58b1VP90Ff+uLByyymr04RxPki+5t0cGgKx8sdNvGbr2IJG0jW2MIdt+VKNhhzr
+         7rn+bpKKKunjlBM3Uzt8gbK+YNFmK/6Kifb7NTgfgCL8gX7owgdR3Vgf/zjWrRbkpuOC
+         iqdJUwz8AJWelSDOpiIuA7vDTLMuHnw6ajaKpMBevF6iI2G2aWOPZLWz0pBmvoED9IoA
+         VJCMl7EfrzhoyabF6eyZNHoC7C1+mBCOUNbcbjK+BzEe0mdgN2mRRt5ocEi7ai+HxwDJ
+         OplQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=reply-to:message-id:date:mime-version:subject:to:from
+         :dkim-signature;
+        bh=SxLstmv1T7Fok1eGlY/jKS2rBdvy7h7k/cAzcTjNut8=;
+        fh=ycwV+RBQfzcdiMVJO+L4LKXC3jsY7ELBtwNbmtdlkgM=;
+        b=BVoqcgXb2oSUvjlTf7hM+fuzZz2JGlAKbjJ4s+5Huav1SX+XXc7hSlQOGgIjhUcUs5
+         0Jq+Q+aY+0vE84NLdUx1ERPMGHsEbklgxxwY5br5iui73mnnItC/0HxSiZMGe/dxFlM2
+         SCqSpDg1hm+WU5772Cj3t4kOUcYCdRqKxMptD4N3ERTusFxiJ4XzHBvcpA1pA2oAWNCW
+         gfn/AvRIaQni8kOGLFg94DSOIQvYjGCQ49c8K2L+WcKyr7FlrXe7mFyUieP4rHeES2j/
+         BrvDgpIPG/K60DBYitifVjlSI+fuaBw5/9dOL75uTQEuvaM5o7vLNIIMVklRp7HwvBCu
+         yrOA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=IIDqqRIr;
+       spf=pass (google.com: domain of java.gimme@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=java.gimme@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <java.gimme@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id v10-20020a2e610a000000b002d236102c70sor271955ljb.12.2024.02.29.04.23.26
+        for <laslasirys@gmail.com>
+        (Google Transport Security);
+        Thu, 29 Feb 2024 04:23:26 -0800 (PST)
+Received-SPF: pass (google.com: domain of java.gimme@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=IIDqqRIr;
+       spf=pass (google.com: domain of java.gimme@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=java.gimme@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1709209406; x=1709814206; dara=google.com;
+        h=reply-to:message-id:date:mime-version:subject:to:from:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=SxLstmv1T7Fok1eGlY/jKS2rBdvy7h7k/cAzcTjNut8=;
+        b=IIDqqRIraMRO50jSzDe9R1dHsTxpAm2NWkK2StEiDEttIzI7xEU48seJWJyED+XxgQ
+         SjWVMiszLhyb81GFHA8fPijr8ldsa3xDlR0M7eJDTT88JTcHI4ZvljarNWlYpnTiJ4s6
+         0llzeN+mQy+DEDrpZod0aLhZMrGQ+vWdh2rkBiv+xkQrczwuwEEeJP0rZnm5wpy52iO3
+         U4or5DYzqBF8FgGcck7uE6DXPMQs+FPB6h72OkODrUQw5zdxXF8gqasYefzkWBz6XqKQ
+         N1E0e50Rq2xakMjfRBJHl72CPB8e766Y6/r0W0H6WrZb/wo9wg+X98JVJKh08YrcQsLO
+         JcBg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1709209406; x=1709814206;
+        h=reply-to:message-id:date:mime-version:subject:to:from
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=SxLstmv1T7Fok1eGlY/jKS2rBdvy7h7k/cAzcTjNut8=;
+        b=KtC11QdnriqQshz0fg38JiUzabm+XL1OXYTLkTubW3vKYpEKLKG8cmAwdHGwUe0pTt
+         tcwLj/lxIw+onc5b8R0EzG41CpXOG5rR+8JqII+m83rqVUIXzfBGPw8TErzMHoaluf9j
+         awyFNLVsx4JFPDHDpfzGi796bqBvfkNGnubqQdqghSJ96r1F0Jkxarh+S0IvG/vcoMpb
+         uv4cJmMTxi4RIjAGZZL4u1HVs0dm3u1Y4RJtNKdSHqZhJgTjHw2d9nQ7zcA0X2m84Szf
+         h4HKLTPVQAIMkunT8l7qNUJWXnNoUEpODCNYBYPME6SCHgbTk8bbVbwvOgGAdZNFgLhp
+         gk0Q==
+X-Gm-Message-State: AOJu0Yz9qrZv9i1FXafcfY+Jp29aBoD+xTQvo8ILftcnsrCdkzRDVPSd
+	ntWFupedUEf6U3O4yQscD/t/Orh/42/pIBIuM9d+lKldaFXDCbzX4Yabyefj
+X-Google-Smtp-Source: AGHT+IEai9RAfvNwQO7AnSvQf43q0GGMB8xbiP4KdIxp3xjPsFtAgjxJJRV2VjFvxDfJag+pcLu6TA==
+X-Received: by 2002:a2e:884a:0:b0:2d2:a53d:bbb9 with SMTP id z10-20020a2e884a000000b002d2a53dbbb9mr1318950ljj.50.1709209405700;
+        Thu, 29 Feb 2024 04:23:25 -0800 (PST)
+Return-Path: <java.gimme@gmail.com>
+Received: from f153.i.mail.ru (f153.i.mail.ru. [45.84.128.61])
+        by smtp.gmail.com with ESMTPSA id r4-20020a2eb604000000b002d25eb9e940sm200862ljn.90.2024.02.29.04.23.25
+        for <laslasirys@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Feb 2024 04:23:25 -0800 (PST)
+From: java.gimme@gmail.com
+To: =?UTF-8?B?0JTQtdC90LjRgSDQndCw0LnQtNCw0L3QvtCy?= <laslasirys@gmail.com>
+Subject: =?UTF-8?B?SU1HXzU0NjEuY3N2?=
+MIME-Version: 1.0
+X-Mailer: Mail.Ru Mailer 1.0
+Date: Thu, 29 Feb 2024 15:23:24 +0300
+X-Letter-Fingerprint: h10HOV6eAUuVTCBk6wUld0ScAwV5WCTs
+Message-ID: <1709209404.164351148@f511.i.mail.ru>
+X-Priority: 3 (Normal)
+Reply-To: java.gimme@gmail.com
+Content-Type: multipart/alternative;
+	boundary="--ALT--2a380ed880c4435f96eca6178d774c821709209404"
+Authentication-Results: f153.i.mail.ru; auth=pass smtp.auth=java.gimme@gmail.com smtp.mailfrom=java.gimme@gmail.com
+X-Mailru-Src: fe
+X-7564579A: B8F34718100C35BD
+X-77F55803: 119C1F4DF6A9251C12621F5BA22A7F9F872CCFB8458FB04E219E82A7B189AEE68FD872164937FA4C4574AEC351D31903A38EDC5A415ACE8ADE86093FB598B0B76FBB9D1D1BC54DF6
+X-7FA49CB5: 70AAF3C13DB70168C09775C1D3CA48CFD1F72AFF38C4F615B2086D80B0504778CF19DD082D7633A0ACBFF42033827DA764CD17681C2FEB7A1661749BA6B9773508AD2D65AADFBAF8C4224003CC836476ABE134FDCE4E2725BFD28B28ED4578739E625A9149C048EE9ECD01F8117BC8BEBFD28B28ED4578732EF20D2F80756B5F40A5AABA2AD37119BCF491FFA38154B6D5E8D9A59859A8B6694D4B13161F3766BCF491FFA38154B6B5C8C57E37DE458B7AC6C5076A9912D9A93B80C6DEB9DEE97C6FB206A91F05B2286C8F00C5BCC50B7B0CE8DD16208350BB5A64B5EE0D2EE302ED4CEA229C1FA827C277FBC8AE2E8BAA867293B0326636D2E47CDBA5A96583C09775C1D3CA48CF90BCC82C2C62A6D1117882F4460429724CE54428C33FAD30A8DF7F3B2552694AC26CFBAC0749D213D2E47CDBA5A9658378DA827A17800CE709B92020B71E24959FA2833FD35BB23DF004C906525384302BEBFE083D3B9BA71A620F70A64A45A98AA50765F7900637A451E1E29F2EDBED6D1867E19FE1407959CC434672EE6371089D37D7C0E48F6C8AA50765F7900637A3BBED0027C3795BEFF80C71ABB335746BA297DBC24807EABDAD6C7F3747799A
+X-C1DE0DAB: 0D63561A33F958A50B3D2230B0537CA8F31B5BB5E235C91D298C2AB1F70652C0F87CCE6106E1FC07E67D4AC08A07B9B09B873608BE13BC28CB5012B2E24CD356
+X-C8649E89: 1C3962B70DF3F0ADE2815F1F17DA719077DD89D51EBB77422CCB5A6D6581D03D0776B5B2C279835F17BCBE6708A5A68D02015372BE9702A24BCAF9C0FF2828FCE355253BE584B8580B7865752B7ED258815675568AD85778C4421F0129BC9DA51B56794A24E1788A79715274B1BA93F7AD9C251D4CF4BFF552EE4E5D9E54FDA44C41F94D744909CE0CD545413776A5D9DBF2DCE67CBBE8A1B80F9ABE83EDB0F72BD3E44DE9B469C4
+X-D57D3AED: 3ZO7eAau8CL7WIMRKs4sN3D3tLDjz0dLbV79QFUyzQ2Ujvy7cMT6pYYqY16iZVKkSc3dCLJ7zSJH7+u4VD18S7Vl4ZUrpaVfd2+vE6kuoey4m4VkSEu530nj6fImhcD4MUrOEAnl0W826KZ9Q+tr5+wYjsrrSY/u8Y3PrTqANeitKFiSd6Yd7yPpbiiZ/d5BsxIjK0jGQgCHUM3Ry2Lt2G3MDkMauH3h0dBdQGj+BB/iPzQYh7XS329fgu+/vnDhbI8lmklCK05IvkfCqZTxgQ==
+X-Mailru-MI: 10000000000000800
+X-Mailru-Sender: 9829C60DB7C1633B661F0F3BCF50A5F95F2D1E5F208BE226C572C86740B3908F7FB890120C7F767A8F02D6ACAF8487AD2C0B55A4EC0D1621E695170D473CD837AA33A1A6AD3297891E60DA90B68B1748C77752E0C033A69E3453F38A29522196
+X-Mras: Ok
+X-Spam: undefined
+
+
+----ALT--2a380ed880c4435f96eca6178d774c821709209404
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+CgoKCgo=
+
+----ALT--2a380ed880c4435f96eca6178d774c821709209404
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+CjxIVE1MPjxCT0RZPjxkaXYgaWQ9ImNvbXBvc2VXZWJWaWV3X2VkaXRhYmxlX2NvbnRlbnQiIGRh
+dGEtbWFpbHJ1YXBwLWNvbXBvc2UtaWQ9ImNvbXBvc2VXZWJWaWV3X2VkaXRhYmxlX2NvbnRlbnQi
+IHN0eWxlPSJ0ZXh0LWFsaWduOiBsZWZ0OyI+PGJyPjxkaXY+PGJyPjwvZGl2PjxkaXY+PGJyPjwv
+ZGl2PjxkaXYgaWQ9Im1haWwtYXBwLWF1dG8tc2lnbmF0dXJlIj4KCjxicj4KPC9kaXY+PGRpdiBp
+ZD0iY29tcG9zZVdlYlZpZXdfcHJldmlvdXNlX2NvbnRlbnQiIGRhdGEtbWFpbHJ1YXBwLWNvbXBv
+c2UtaWQ9ImNvbXBvc2VXZWJWaWV3X3ByZXZpb3VzZV9jb250ZW50Ij48L2Rpdj48L2Rpdj48L0JP
+RFk+PC9IVE1MPgo=
+
+----ALT--2a380ed880c4435f96eca6178d774c821709209404--
